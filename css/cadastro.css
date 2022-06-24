@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.conteiner {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.all {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center;
+}
+
+.logo img {
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    top: 0%;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    margin-bottom: 50px;
+}
+
+.inputs {
+    display: grid;
+    align-items: center;
+    position: relative;
+    left: 20%;
+    margin-top: 50px;
+}
+
+span {
+    color: white;
+    margin-right: 20px;
+}
+
+.cadastro-box input {
+    outline: none;
+    font-size: 15px;
+    border: rgb(49, 49, 49) solid 2px;
+    background-color: rgb(218, 218, 218);
+    width: 55%;
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+input:hover {
+    background-color: rgb(255, 187, 110);
+}
+
+.cadastro-box .remember a {
+    font-size: 15px;
+    position: relative;
+    left: 55%;
+}
+
+.submit {
+    height: 30px;
+    width: 55%;
+}
+
+.submit input {
+    background-color: rgba(255, 145, 0, 0.89);
+    position: absolute;
+    margin-top: 20px;
+    width: 59%;;
+    left: 20%;
+    height: 10%;
+    transition: 0.2s;
+}
+
+.submit input:hover {
+    background-color: rgba(184, 104, 0, 0.89);
+    font-size: 17px;
+}
