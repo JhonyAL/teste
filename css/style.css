@@ -1,3 +1,7 @@
+/*imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -81,21 +85,24 @@ body {
 .search input {
     border: none;
     outline: none;
-    padding: 7px;
-    border-radius: 5px;
-    color: rgb(36, 36, 36);
-    width: 250px;
+    font-size: 16px;
 }
 
 .search {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    color: rgb(36, 36, 36);
+    height: 30px;
+    width: 250px;
+    background-color: white;
 }
 
 .search-icon {
-    width: 40px;
-    color: white;
+    width: 25px;
+    position: relative;
+    left: -8px;
     cursor: pointer;
 }
 
@@ -133,6 +140,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: Amarante;
 }
 
 .img1 img {
