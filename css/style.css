@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -60,6 +61,11 @@ body {
     color: rgb(0, 0, 0);
 }
 
+.login a:hover {
+    background-color: #ff9100;
+    color: rgb(0, 0, 0);
+}
+
 .login:hover {
     background-color: #ff9100;
     color: rgb(0, 0, 0);
@@ -82,10 +88,19 @@ body {
     cursor: pointer;
 }
 
+.login a {
+    color: white;
+    text-decoration: none;
+}
+
 .search input {
     border: none;
     outline: none;
     font-size: 16px;
+}
+
+.search:focus {
+    background-color: rgb(36, 36, 40);
 }
 
 .search {
