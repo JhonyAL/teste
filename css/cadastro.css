@@ -96,3 +96,7 @@ input:hover {
     background-color: rgba(184, 104, 0, 0.89);
     font-size: 17px;
 }
+
+.logo {
+    width: 300px;
+}

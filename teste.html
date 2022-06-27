@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body id="body">   
+
+    <img id="lampada" src="./img/pic_bulboff.gif" style="width:100px">
+    <br>
+
+    <button id="interruptor">Interruptor</button>
+
+    <script>
+        var elementoInterruptor = document.getElementById('interruptor');
+        var elementolampada     = document.getElementById('lampada');
+
+        var ligado = false;
+
+        elementoInterruptor.onclick = function(){
+            console.log(document.getElementsByTagName('body'));
+            if(ligado){
+                ligado = false;
+                elementolampada.src = './img/pic_bulboff.gif';
+                elementoInterruptor.innerHTML = 'Desligado';
+                elementoInterruptor.style.background = 'red';
+                document.getElementsByTagName('body')[0].style.background = "#FFF";
+            }
+            else{
+                ligado = true;
+                elementolampada.src = './img/pic_bulbon.gif'
+                elementoInterruptor.innerHTML = 'Ligado';
+                elementoInterruptor.style.background = 'green';
+                document.getElementsByTagName('body')[0].style.background = "#000";
+            }
+        }
+
+    </script>
+</body>
+</html>
