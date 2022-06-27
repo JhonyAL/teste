@@ -4,14 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Docu</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        div input {
+            width: 200px;
+        }
+
+        table, tr, th {
+            border: 2px black solid;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
-    <form action="GET">
+    <h1 id="seuNome"></h1>
+    <div>
         <label for="name-prod">Nome do Produto</label>
-        <input type="text" name="name-prod" id="">
+        <input type="text" name="name-prod" id="nome">
         <label for="preco-prod">Preço do Produto</label>
-        <input type="preco-prod">
-    </form>
+        <input type="text" name="preco-prod" id="preco">
+        <label for="quant">Quantidade</label>
+        <input type="text" name="quant" id="quant">
+        <input type="submit" value="Enviar" id="btn-add">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Preço Total</th>
+            </tr>
+        </thead>
+        <tbody id="dados-produto">
+
+        </tbody>
+        <tr>
+            <th colspan="3" style="text-align: end;">Total</th>
+            <th>R$ <samp id="total">0</samp></th>
+        </tr>
+        
+    </table>
+
+
+    <script>
+        var nomePessoa = prompt("Seu nome?");
+        document.getElementById('seuNome').innerText = nomePessoa;
+        var nomeProd = document.getElementById('nome');
+        var precoProd = document.getElementById('preco');
+        var quantProd = document.getElementById('quant');
+        var dados = document.getElementById('dados-produto');
+        var btnAdd = document.getElementById('btn-add');
+        var totalSoma = 0;
+
+        btnAdd.onclick = function(){
+            addProduto(nomeProd.value,precoProd.value,quantProd.value);
+        }
+
+        // function addProduto(){
+        //     var total = parseFloat(precoProd.value) * parseFloat(quantProd.value);
+        //     totalSoma += total;
+        //     dados.innerHTML += `<tr>
+        //                         <td>${nomeProd.value}</td>
+        //                         <td>${precoProd.value}</td>
+        //                         <td>${quantProd.value}</td>
+        //                         <td>${total}</td>
+        //                         </tr>`;
+        //     document.getElementById('total').innerText = totalSoma;
+
+        // }
+
+        function addProduto(nome,preco,quant){
+            var total = parseFloat(preco) * parseFloat(quant);
+            totalSoma += total;
+            dados.innerHTML += `<tr>
+                                <td>${nome}</td>
+                                <td>${preco}</td>
+                                <td>${quant}</td>
+                                <td>${total}</td>
+                                </tr>`;
+            document.getElementById('total').innerText = totalSoma;
+
+        }
+    </script>
 </body>
 </html>
